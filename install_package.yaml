@@ -1,0 +1,19 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: Updating Package
+    apt:
+      update_cache: yes
+
+  - name: installing apache2 package
+    apt:
+      name: apache2
+      state: latest
+  
+  - name: installing colordiff package
+    apt:
+      name: colordiff
+      state: latest
