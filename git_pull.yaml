@@ -1,0 +1,20 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+  
+  - name: Ensure the destination directory exists
+    ansible.builtin.file:
+      path: /home/bahe/tmp
+      state: directory
+      mode: '0755'
+
+  - name: Pull the Git repository
+    ansible.builtin.git:
+      repo: https://github.com/Balaji22993/FirstRepo.git
+      dest: /home/bahe/tmp
+      version: main  # Specify the branch or tag
+      force: yes     # Forcefully update the repository
+      update: yes    # Pull updates from the repository
+

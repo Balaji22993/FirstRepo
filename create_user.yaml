@@ -1,0 +1,12 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+    
+  - name: Creating user hema
+    user:
+      name: hema
+      #groups: sudo
+      #To delete the user
+      #state: absent

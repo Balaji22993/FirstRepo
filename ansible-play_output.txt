@@ -1,0 +1,15 @@
+
+PLAY [all] *********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [localhost]
+
+TASK [installing apache2 package] **********************************************
+ok: [localhost]
+
+TASK [installing colordiff package] ********************************************
+changed: [localhost]
+
+PLAY RECAP *********************************************************************
+localhost                  : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+
