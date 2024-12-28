@@ -1,0 +1,13 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+
+  - name: Copying files
+    copy:
+      src: /home/bahe/tmp/script.sh
+      dest: /home/bahe/FirstRepo/script.sh
+      owner: root
+      group: root
+      mode: 0755
